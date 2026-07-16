@@ -11,6 +11,7 @@
 | --- | --- |
 | 🙋 遇到课程或项目问题 | [提问答疑](https://github.com/DaSE-VibeCoding/SummerCamp-2026/issues/new?template=course-q-and-a.yml) |
 | 👋 初次来这里，想认识大家 | [进入 🌟 破冰认识](https://github.com/DaSE-VibeCoding/SummerCamp-2026/discussions/categories/icebreaker) |
+| 🧩 分享或发现好用的 Agent Skill | [Skill 广场](https://github.com/DaSE-VibeCoding/SummerCamp-2026/discussions/categories/skill-square) · [精选索引](skills/README.md) |
 | 🤝 想认识伙伴、一起组队 | [寻找队友](https://github.com/DaSE-VibeCoding/SummerCamp-2026/discussions) |
 | 🚀 已有项目，正在招募成员 | [发布招募](https://github.com/DaSE-VibeCoding/SummerCamp-2026/discussions) |
 
