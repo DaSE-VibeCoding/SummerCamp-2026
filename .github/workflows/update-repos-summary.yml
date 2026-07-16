@@ -1,0 +1,84 @@
+name: Update Repositories Summary
+
+on:
+  schedule:
+    # Run every hour at minute 0
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-summary:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Fetch repos and generate summary
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          # Fetch all public repos from the DaSE-VibeCoding org (paginated)
+          PAGE=1
+          ALL_REPOS="[]"
+
+          while true; do
+            REPOS=$(curl -sf -H "Authorization: token $GH_TOKEN" \
+              "https://api.github.com/orgs/DaSE-VibeCoding/repos?per_page=100&page=$PAGE&type=all")
+
+            COUNT=$(echo "$REPOS" | jq 'length')
+            if [ "$COUNT" -eq 0 ]; then
+              break
+            fi
+
+            ALL_REPOS=$(echo "$ALL_REPOS" "$REPOS" | jq -s '.[0] + .[1]')
+            PAGE=$((PAGE + 1))
+          done
+
+          # Sort repos by updated_at descending
+          ALL_REPOS=$(echo "$ALL_REPOS" | jq 'sort_by(-.pushed_at)')
+
+          TIMESTAMP=$(date -u '+%Y-%m-%d %H:%M:%S UTC')
+          TOTAL=$(echo "$ALL_REPOS" | jq 'length')
+
+          # Generate the README
+          {
+            echo "# DaSE-VibeCoding Organization Repositories"
+            echo ""
+            echo "> Auto-updated every hour by GitHub Actions"
+            echo ""
+            echo "## Repositories ($TOTAL total)"
+            echo ""
+            echo "| # | Repository | Description | Language | Stars | Forks | Last Push |"
+            echo "|---|-----------|-------------|----------|-------|-------|-----------|"
+
+            echo "$ALL_REPOS" | jq -r 'to_entries[] | "| \(.key + 1) | [\(.value.name)](\(.value.html_url)) | \(.value.description // "No description") | \(.value.language // "-") | ⭐ \(.value.stargazers_count) | 🍴 \(.value.forks_count) | \(.value.pushed_at | split("T")[0]) |"'
+
+            echo ""
+            echo "---"
+            echo ""
+            echo "*Last updated: $TIMESTAMP*"
+          } > summary/README.md
+
+          echo "✅ Summary generated: $TOTAL repositories listed"
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add summary/README.md
+
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "docs: auto-update repositories summary"
+            git push
+          fi
