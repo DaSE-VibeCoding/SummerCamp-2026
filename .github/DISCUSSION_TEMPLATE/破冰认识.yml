@@ -1,0 +1,58 @@
+title: "【破冰】"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        欢迎来到破冰认识！按你愿意分享的程度填写即可。请勿发布 Token、密码、账号、Cookie、私有端点、学号、电话或其他敏感信息。
+  - type: input
+    id: nickname
+    attributes:
+      label: 怎么称呼你？
+      placeholder: 例如：小明 / Ming
+    validations:
+      required: true
+  - type: textarea
+    id: direction
+    attributes:
+      label: 你感兴趣的项目方向
+      placeholder: 例如：校园工具、数据可视化、AI 应用……
+    validations:
+      required: true
+  - type: checkboxes
+    id: roles
+    attributes:
+      label: 你能负责或愿意尝试的角色
+      options:
+        - label: 💻 Coding
+        - label: 🧭 Support
+        - label: 🎨 设计
+        - label: 📊 数据
+        - label: 🤝 沟通协调
+        - label: 🌟 鼓励师
+        - label: 🔧 资源协调与环境支持
+  - type: textarea
+    id: vibe_stack
+    attributes:
+      label: 你的 Vibe 工具栈（可选）
+      description: 可填写常用工具、模型、Skills、MCP 或想学习的方向；不要粘贴配置和密钥。
+      placeholder: 例如：Codex + GPT；想学习 GitHub MCP 和前端设计 Skill
+  - type: textarea
+    id: project
+    attributes:
+      label: 你的 Vibe 项目或想做的项目（可选）
+      placeholder: 一句话介绍；仅添加愿意公开分享的项目链接
+  - type: input
+    id: avatar
+    attributes:
+      label: 虚拟形象链接（可选）
+      description: 可填写本人拥有或获授权的图片/GIF 链接；不要使用他人未经同意的照片。
+  - type: input
+    id: extras
+    attributes:
+      label: MBTI、代词或可投入时间（可选）
+      placeholder: 例如：INTP / TA / 每天 1–2 小时
+  - type: textarea
+    id: teammates
+    attributes:
+      label: 希望认识怎样的伙伴？（可选）
+      placeholder: 例如：想找会数据处理或交互设计的同学一起做项目
