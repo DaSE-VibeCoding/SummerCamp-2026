@@ -1,0 +1,77 @@
+name: "🙋 课程答疑"
+description: "提交一个可被同学认领和跟进的课程问题"
+title: "[答疑] "
+labels: ["答疑", "待认领"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢你先整理问题再提问！请先搜索相似 Issue；不要粘贴密码、Token、学号、电话或其他敏感信息。
+  - type: dropdown
+    id: goal
+    attributes:
+      label: 你的问题目标是什么？
+      description: 选择最接近的一项，帮助同学判断如何协助。
+      options:
+        - 环境或账号
+        - 课程练习
+        - 项目开发
+        - 协作流程
+        - 作品改进
+        - 经验分享
+    validations:
+      required: true
+  - type: dropdown
+    id: topic
+    attributes:
+      label: 课程章节或技术方向
+      description: 选择最接近的一项；提交后维护者会补充对应技术标签。
+      options:
+        - 环境配置
+        - Git、分支或 Pull Request
+        - Claude Code
+        - 前端与浏览器
+        - 数据处理与可视化
+        - 项目协作
+        - 其他课程内容
+    validations:
+      required: true
+  - type: textarea
+    id: tried
+    attributes:
+      label: 你已经尝试了什么？结果如何？
+      description: 写出命令、操作步骤、报错摘要或截图说明；请先移除账号、路径中的个人信息和所有凭据。
+      placeholder: |
+        1. 我尝试了……
+        2. 预期结果是……
+        3. 实际结果是……
+    validations:
+      required: true
+  - type: checkboxes
+    id: help_type
+    attributes:
+      label: 希望得到怎样的帮助？
+      options:
+        - label: 给我一个排查思路
+        - label: 和我一起定位问题
+        - label: 帮我复核代码或方案
+        - label: 分享可参考的经验
+    validations:
+      required: true
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: 紧急程度（可选）
+      options:
+        - 不着急，方便时回复即可
+        - 希望今天得到建议
+        - 与即将到来的课堂活动有关
+    validations:
+      required: false
+  - type: textarea
+    id: links
+    attributes:
+      label: 相关链接或截图（可选）
+      description: 仅添加公开且不含敏感信息的链接或截图。
+    validations:
+      required: false
