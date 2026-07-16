@@ -1,9 +1,9 @@
-title: "【破冰测试】"
+title: "【破冰】"
 body:
   - type: markdown
     attributes:
       value: |
-        这是一个临时诊断表单，仅用于验证 GitHub Discussion 类别表单是否正常加载。请勿在此发布个人信息或敏感信息。
+        欢迎来到破冰认识！按你愿意分享的程度填写即可。请勿发布 Token、密码、账号、Cookie、私有端点、学号、电话或其他敏感信息。
   - type: input
     id: nickname
     attributes:

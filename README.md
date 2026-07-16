@@ -10,7 +10,7 @@
 | 想做什么？ | 入口 |
 | --- | --- |
 | 🙋 遇到课程或项目问题 | [提问答疑](https://github.com/DaSE-VibeCoding/SummerCamp-2026/issues/new?template=course-q-and-a.yml) |
-| 👋 初次来这里，想认识大家 | [进入破冰认识](https://github.com/DaSE-VibeCoding/SummerCamp-2026/discussions/categories/%E7%A0%B4%E5%86%B0%E8%AE%A4%E8%AF%86) |
+| 👋 初次来这里，想认识大家 | [进入 🌟 破冰认识](https://github.com/DaSE-VibeCoding/SummerCamp-2026/discussions/categories/icebreaker) |
 | 🤝 想认识伙伴、一起组队 | [寻找队友](https://github.com/DaSE-VibeCoding/SummerCamp-2026/discussions) |
 | 🚀 已有项目，正在招募成员 | [发布招募](https://github.com/DaSE-VibeCoding/SummerCamp-2026/discussions) |
 
