@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200" role="img" aria-labelledby="title description">
+  <title id="title">Live More, Work Less.</title>
+  <desc id="description">An experimental four-by-three SummerCamp 2026 README banner in lime, deep teal, and coral.</desc>
+  <rect width="1600" height="1200" fill="#d6ff3f"/>
+  <path d="M-80 1060 L590 918 H1680" fill="none" stroke="#003e50" stroke-width="34" opacity=".68"/>
+  <circle cx="1375" cy="185" r="92" fill="#ff784f"/>
+  <text x="116" y="367" fill="#061c23" font-family="Arial, sans-serif" font-size="260" font-weight="900" letter-spacing="-11">LIVE</text>
+  <text x="106" y="610" fill="#061c23" font-family="Arial, sans-serif" font-size="260" font-weight="900" letter-spacing="-11">MORE</text>
+  <rect x="102" y="684" width="1095" height="220" fill="#003e50"/>
+  <text x="145" y="845" fill="#ff784f" font-family="Arial, sans-serif" font-size="180" font-weight="900" letter-spacing="-7">WORK LESS.</text>
+  <rect x="108" y="984" width="1340" height="72" fill="#061c23"/>
+  <text x="142" y="1034" fill="#d6ff3f" font-family="Arial, sans-serif" font-size="31" font-weight="500">We teach our machines to think, for thinking should never feel like a machine.</text>
+  <text x="112" y="1117" fill="#003e50" font-family="ui-monospace, monospace" font-size="19" letter-spacing="3">SUMMERCAMP 2026 / VIBE CODING</text>
+</svg>

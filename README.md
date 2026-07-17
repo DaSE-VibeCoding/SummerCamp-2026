@@ -3,7 +3,7 @@
 
 ## 课程社区
 
-<img src="assets/community-collaboration-banner.png" alt="同学们围绕项目看板互相提问、协作并寻找队友的插画" width="100%">
+<img src="assets/summercamp-live-more-banner.png" alt="Live More, Work Less. SummerCamp 2026 Vibe Coding Banner" width="100%">
 
 在这里，问题可以被看见，经验可以被复用，想法也能找到伙伴。欢迎每位同学参与互助！
 
