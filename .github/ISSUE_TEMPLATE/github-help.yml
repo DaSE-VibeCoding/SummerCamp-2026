@@ -1,0 +1,73 @@
+name: "🐙 GitHub 使用与权限"
+description: "提交 GitHub 组织、权限或基础操作问题，邀请同学一起排查"
+title: "[GitHub] "
+labels: ["答疑", "待认领"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请先搜索相似 Issue。不要粘贴 Token、密码、验证码、私人仓库链接、学号、电话或其他敏感信息；报错截图请先打码。
+  - type: dropdown
+    id: topic
+    attributes:
+      label: 你遇到的是哪类 GitHub 问题？
+      options:
+        - 加入 Organization 或访问课程仓库
+        - 仓库权限、邀请或角色
+        - Issue、Pull Request 或 Discussion 的使用
+        - GitHub Desktop、网页或命令行操作
+        - Git 推送、拉取或分支协作
+        - 账号登录、验证或个人资料设置
+        - 其他 GitHub 问题
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: 你想完成什么操作？
+      description: 例如“加入课程 Organization”“给仓库提 Issue”或“创建一个 Pull Request”。
+      placeholder: 我想要……
+    validations:
+      required: true
+  - type: textarea
+    id: tried
+    attributes:
+      label: 你已经尝试了什么？结果如何？
+      description: 按顺序写出操作与报错摘要；请移除用户名、邮箱、Token、私有链接和本地个人路径。
+      placeholder: |
+        1. 我打开了……
+        2. 我点击 / 输入了……
+        3. 实际看到的提示是……
+    validations:
+      required: true
+  - type: dropdown
+    id: device
+    attributes:
+      label: 你使用的方式（可选）
+      options:
+        - GitHub 网页
+        - GitHub Desktop
+        - VS Code / Cursor 等编辑器
+        - 终端命令行
+        - 手机端 GitHub
+        - 其他
+    validations:
+      required: false
+  - type: checkboxes
+    id: help_type
+    attributes:
+      label: 希望得到怎样的帮助？
+      options:
+        - label: 请告诉我下一步怎么做
+        - label: 请一起判断权限或邀请状态
+        - label: 请帮我理解报错或页面提示
+        - label: 请分享可参考的操作步骤
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: 截图或公开链接（可选）
+      description: 请只附已打码的截图或公开链接；不要附带任何凭据。
+    validations:
+      required: false
