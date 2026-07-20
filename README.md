@@ -14,5 +14,6 @@
 | 🧩 分享或发现好用的 Agent Skill | [Skill 广场](https://github.com/DaSE-VibeCoding/SummerCamp-2026/discussions/categories/skill-square) · [精选索引](skills/README.md) |
 | 🤝 想认识伙伴、一起组队 | [寻找队友](https://github.com/DaSE-VibeCoding/SummerCamp-2026/discussions) |
 | 🚀 已有项目，正在招募成员 | [发布招募](https://github.com/DaSE-VibeCoding/SummerCamp-2026/discussions) |
+| 🐾 想为公共合照画廊添加自己的宠物 | [添加宠物](https://github.com/DaSE-VibeCoding/SC26-CodexPetsGallery) |
 
 开始前，请先搜索类似讨论；保持友善；问题解决后记得确认关闭；不要公开密码、Token、学号、电话等敏感信息。详细规则见[社区准则](docs/community-guidelines.md)。
